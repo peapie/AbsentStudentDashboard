@@ -1,0 +1,23 @@
+{
+  "name": "absent-student-dashboard",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peapie/AbsentStudentDashboard.git"
+  },
+  "author": "Stephanie Barreyro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peapie/AbsentStudentDashboard/issues"
+  },
+  "homepage": "https://github.com/peapie/AbsentStudentDashboard#readme"
+}
