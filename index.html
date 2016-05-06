@@ -19,7 +19,7 @@
   <div id="dashboard" ng-controller="StudentListCtrl">
     <div>
       select threshold here: 
-      <input> </input>
+      <input ng-model="query"></input>
     </div>
 
     <div id="statistics">
@@ -28,7 +28,7 @@
 
     <div id="studentList">
       <ul>
-        <li ng-repeat="student in students">
+        <li ng-repeat="student in students | filter:query">
           <span>{{student.name}}</span>
           <span>{{student.schoolName}}</span>
           <span>{{student.attendanceYtd}}</span>
