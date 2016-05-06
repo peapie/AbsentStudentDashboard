@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="absentDashboard">
 <head>
   <meta charset="utf-8">
   <title>Absent Students</title>
   <script src="public/js/lib/angular/angular.min.js"></script>
+  <script src="public/js/controllers.js"></script>
 </head>
-<body>
+
+<body >
   <div id="navbar"> 
     <p> Hello, {{World}}!</p>
 
@@ -14,7 +16,7 @@
     </div>
   </div>
 
-  <div id="dashboard">
+  <div id="dashboard" ng-controller="StudentListCtrl">
     <div>
       select threshold here: 
       <input> </input>
@@ -25,7 +27,13 @@
     </div>
 
     <div id="studentList">
-      Your students
+      <ul>
+        <li ng-repeat="student in students">
+          <span>{{student.name}}</span>
+          <span>{{student.schoolName}}</span>
+          <span>{{student.attendanceYtd}}</span>
+        </li>
+      </ul>
     </div>
   </div>
 </body>
