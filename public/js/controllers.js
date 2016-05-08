@@ -1,17 +1,7 @@
 var absentDashboard = angular.module('absentDashboard', []);
 
-absentDashboard.controller('StudentListCtrl', function ($scope) {
-  $scope.students = [
-    {'name': 'Mickey Mouse',
-     'schoolName': 'Disney',
-     'attendanceYtd': '10',
-    },
-    {'name': 'Minnie Mouse',
-     'schoolName': 'Disney',
-     'attendanceYtd': '1',
-    },
-    {'name': 'Mike Wazowski',
-     'schoolName': 'Monsters U',
-     'attendanceYtd': '2'}
-  ];
+absentDashboard.controller('StudentListCtrl', function ($scope, $http) {
+  $http.get('https://script.google.com/macros/s/AKfycbxtbtw8aL1oY3eyxjFE98kOCqdaG4T4pWvPbNcEv9PlWHPbHQF_/exec').success(function(data) {
+    $scope.students = data;
+  });
 });
